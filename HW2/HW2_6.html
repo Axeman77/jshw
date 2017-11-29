@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSHM2</title>
+</head>
+<body>
+<script>
+    var a = +prompt('Введите первое число');
+    var b = +prompt('Введите второе число');
+    var operation = prompt('Введите операцию: sum или sub или mult или div, что нибудь одно')
+        function mathOperation(a,b,operation) {
+        switch (operation) {
+            case 'sum':
+                return a + b;
+                break;
+            case 'sub':
+                return a - b;
+                break;
+            case 'mult':
+                return a * b;
+                break;
+            case 'div':
+                return a / b;
+                break;
+        }
+    }
+
+    var result = mathOperation(a,b,operation);
+    alert(result);
+
+
+</script>
+</body>
+</html>
