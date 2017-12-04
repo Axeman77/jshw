@@ -5,12 +5,31 @@
 </head>
 <body>
     <script>
-        var i = 2;
-        while (i<=100) {
-            if (i%2=0)
-            console.log (i);
-            i++;
-        }
+
+            var i = 2;
+            primeNumber:
+                while (i<=100) {
+                    var j = 2;
+                    while (j<i) {
+                            if (i % j == 0) continue primeNumber;
+                            j++;
+                        }
+                        i++;
+                        console.log( i ); // простое
+                }
+
+
+
+
+//        primeNumber:
+//            for (var i = 2; i <= 100; i++) {
+//
+//                for (var j = 2; j < i; j++) {
+//                    if (i % j == 0) continue primeNumber;
+//                }
+//
+//                console.log( i ); // простое
+//            }
     </script>
 </body>
 </html>
