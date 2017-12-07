@@ -5,6 +5,31 @@
     <title>JS</title>
 </head>
 <body>
+    <script>
+        var x = +prompt('Введите число от 0 до 999');
+        
+        function showUnits ( x ) {
+            return  x % 10;
+        }
+        
+        var a = showUnits ( x );
+        console.log ( a );
 
+        function showDozens ( x ) {
+            return  Math.floor( x / 10 );
+        }
+
+        var b = showDozens ( x );
+        console.log ( b );
+
+        function showHundreds ( x ) {
+            return  Math.floor( x / 100 );
+        }
+
+        var c = showHundreds ( x );
+        console.log ( c );
+//        a = Math.floor( x / y ); //чтобы отбросить дробную часть
+//        b = x % y;
+    </script>
 </body>
 </html>
