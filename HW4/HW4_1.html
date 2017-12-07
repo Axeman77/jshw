@@ -7,29 +7,38 @@
 <body>
     <script>
         var x = +prompt('Введите число от 0 до 999');
+      
+        function expandNumber ( x ) {
+            var numObj = {
+              units: 'еденицы',
+              dozens: 'десятки',
+              hundreds: 'сотни',
+            };
+            if ( x < 1 || x > 999 ) {
+                console.log ('Ошибка. Введите число');
+                return numObj;
+            } else {
+                this.units = showUnits;
+                this.dozens = showDozens;
+                this.hundreds = showHundreds;
+                return numObj;
+            }
+        }
         
         function showUnits ( x ) {
-            return  x % 10;
+            return  x % 10; //чтобы показать остаток от деления
         }
         
-        var a = showUnits ( x );
-        console.log ( a );
-
         function showDozens ( x ) {
-            return  Math.floor( x / 10 );
+            return  Math.floor( x / 10 ); //чтобы отбросить дробную часть
         }
-
-        var b = showDozens ( x );
-        console.log ( b );
-
+      
         function showHundreds ( x ) {
-            return  Math.floor( x / 100 );
+            return  Math.floor( x / 100 ); //чтобы отбросить дробную часть
         }
 
-        var c = showHundreds ( x );
-        console.log ( c );
-//        a = Math.floor( x / y ); //чтобы отбросить дробную часть
-//        b = x % y;
+        var a = expandNumber ( x );
+        console.log ( a );
     </script>
 </body>
 </html>
