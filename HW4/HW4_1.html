@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+        var x = +prompt('Введите число от 0 до 999');
+      
+        function expandNumber ( x ) {
+            var numObj = {
+              units: 'еденицы',
+              dozens: 'десятки',
+              hundreds: 'сотни',
+            };
+            if ( x < 0 || x > 999 ) {
+                console.log ('Ошибка. Введите число от 0 до 999');
+                return numObj;
+            } else {
+                numObj.units = showUnits ( x );
+                numObj.dozens = showDozens ( x );
+                numObj.hundreds = showHundreds ( x );
+                return numObj;
+            }
+        }
+        
+        function showUnits ( x ) {
+            return  x % 10; //чтобы показать остаток от деления
+        }
+        
+        function showDozens ( x ) {
+            return  Math.floor( x / 10 ); //чтобы отбросить дробную часть
+        }
+      
+        function showHundreds ( x ) {
+            return  Math.floor( x / 100 ); //чтобы отбросить дробную часть
+        }
+
+        console.log( expandNumber ( x ));
+    </script>
+</body>
+</html>
