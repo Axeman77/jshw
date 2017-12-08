@@ -15,12 +15,12 @@
               hundreds: 'сотни',
             };
             if ( x < 1 || x > 999 ) {
-                console.log ('Ошибка. Введите число');
+                console.log ('Ошибка. Введите число от 0 до 999');
                 return numObj;
             } else {
-                this.units = showUnits;
-                this.dozens = showDozens;
-                this.hundreds = showHundreds;
+                numObj.units = showUnits ( x );
+                numObj.dozens = showDozens ( x );
+                numObj.hundreds = showHundreds ( x );
                 return numObj;
             }
         }
@@ -37,8 +37,7 @@
             return  Math.floor( x / 100 ); //чтобы отбросить дробную часть
         }
 
-        var a = expandNumber ( x );
-        console.log ( a );
+        console.log( expandNumber ( x ));
     </script>
 </body>
 </html>
