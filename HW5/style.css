@@ -1,0 +1,49 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    table {
+        border-collapse: collapse;
+        margin: auto;
+    }
+
+    td {
+        width: 60px;
+        height: 60px;
+        font-size: 42px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .w {
+        background: #ffffff;
+    }
+
+    .b {
+        background: #6E6E6E;
+    }
+
+    .let {
+        width: 60px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: bold;
+        background: #000000;
+        color: #ffffff;
+    }
+
+    .sf {
+        width: 30px;
+        height: 60px;
+        font-size: 14px;
+        font-weight: bold;
+        background: #000000;
+        color: #ffffff;
+    }
+
+    .ef {
+        width: 30px;
+        height: 30px;
+        background: #000000;
+    }
