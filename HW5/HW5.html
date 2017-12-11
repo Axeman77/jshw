@@ -6,10 +6,27 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
-  <body>
-    <script>
-      document.body.appendChild(table)
-      <table> </table>
-    </script>
-  </body>
+<body>
+<script>
+  function chessBoard() {
+
+    var newTable = document.createElement('table');
+
+    for ( var i = 0; i < 8; i++ ) {
+      var newTr = newTable.insertRow(i);
+
+      for (var j = 0; j < 8; j++) {
+        var newTd = newTr.insertCell( j );
+
+        if ((i%2==1 && j%2==0) || i%2==0 && j%2==1)
+          newTd.classList.add('b')
+      }
+    }
+
+    document.body.appendChild( newTable );
+  };
+
+  chessBoard();
+</script>
+</body>
 </html>
