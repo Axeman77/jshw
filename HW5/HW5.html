@@ -10,7 +10,7 @@
 <script>
   function chessBoard() {
 
-    var newTable = document.createElement('table');
+    var newTable = document.createElement( 'table' );
           lets = [ '','A','B','C','D','E','F','G','H','' ],
           blackFigs1 = [ '8','&#9820;','&#9822;','&#9821;','&#9819;','&#9818;','&#9821;','&#9822;','&#9820;','8' ],
           whiteFigs1 = [ '1','&#9814;','&#9816;','&#9815;','&#9813;','&#9812;','&#9815;','&#9815;','&#9814;','1' ],
@@ -23,7 +23,7 @@
       for (var j = 0; j < 10; j++) {
         var newTd = newTr.insertCell( j );
 
-          switch (i) {
+          switch ( i ) {
               case 0:
                   newTd.innerText = lets[ j ];
                   break;
