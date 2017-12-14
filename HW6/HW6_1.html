@@ -9,17 +9,27 @@
               mainPic.innerHTML = '';
               var bigPicture = event.target.cloneNode(true);
               bigPicture.classList.remove('gallery_item');
-              bigPicture.src = bigPicture.src.replace('small', 'orig');
+              bigPicture.src = bigPicture.src.replace('small', 'big');
 
               mainPic.appendChild(bigPicture);
           }
           event.stopPropagation();
       }
 
+      function checkPicture() {
+          img.src='img/' + pic + '.jpg';
+          if (img.height==30) {
+              res = false;
+              img.onload = alert('картинка существует');
+              img.onerror = alert('картинка не существует');
+              return res;
+          }
+      }
+
       function init() {
-          var pictures = ['casio.jpg', 'swiss.jpeg', 'general.jpg'];
+          var pictures = ['casio.jpg', 'swiss.jpg', 'general.jpg', 'rolex.jpg' ];
           var gallery = document.getElementById('gallery');
-          var mainPic = document.getElementById('mainView');
+          var mainPic = document.getElementById('mainPic');
 
           for(var i = 0; i < pictures.length; i++) {
               var img = document.createElement('img');
@@ -31,14 +41,6 @@
 
           gallery.addEventListener('click', bigPicture);
 
-          document.body.addEventListener('click', function() {
-              console.log('body');
-          })
-
-          document.getElementById('link').addEventListener('click', function(event) {
-              console.log('Hello');
-              event.preventDefault();
-          })
       }
 
       window.onload = init;
@@ -47,8 +49,8 @@
 </head>
 <body>
   <div class="wrapper">
-    <div class="mainPic"></div>
-    <div class="gallery"></div>
+    <div class="mainPic" id="mainPic"></div>
+    <div class="gallery" id="gallery"></div>
   </div>
 </body>
 </html>

@@ -6,11 +6,22 @@
 
 .wrapper {
     width: 800px;
-    height: 800px;
+    height: 100%;
     margin: auto;
     background-color: #faf8d9;
 }
 
 .mainPic {
-    width: 500px;
+    text-align: center;
+    }
+.mainPic img {
+    width: 300px;
+    }
+
+.gallery {
+    text-align: center;
+}
+
+.gallery_item {
+    margin: 30px;
 }
