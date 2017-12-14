@@ -17,14 +17,12 @@
       }
 
       function checkPicture() {
-          img.src='img/' + pic + '.jpg';
-          if (img.height==30) {
-              res = false;
-              img.onload = alert('картинка существует');
-              img.onerror = alert('картинка не существует');
-              return res;
-          }
+          img.src='small/' + pic + '.jpg';
+          img.onload = function(){alert('картинка существует')};
+          img.onerror = function(){alert('картинка не существует')};
       }
+      
+     checkPicture();
 
       function init() {
           var pictures = ['casio.jpg', 'swiss.jpg', 'general.jpg', 'rolex.jpg' ];
