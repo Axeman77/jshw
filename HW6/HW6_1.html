@@ -27,7 +27,8 @@
               img.src = 'small/' + pictures[i];
               img.classList.add( 'gallery_item' );
 
-            img.onerror = function(){
+//            Проверка картинки
+              img.onerror = function(){
               alert( 'картинка' + ' ' + 'small/' + pictures[2] + ' ' + 'не существует' )
             };
 
