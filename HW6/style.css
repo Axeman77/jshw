@@ -4,24 +4,24 @@
     box-sizing: border-box;
 }
 
-.wrapper {
-    width: 800px;
+body {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.item_box {
     height: 100%;
-    margin: auto;
+    margin: 20px;
     background-color: #faf8d9;
+    display: inline-block;
 }
 
-.mainPic {
-    text-align: center;
-    }
-.mainPic img {
-    width: 300px;
-    }
-
-.gallery {
-    text-align: center;
+.add_item{
+    margin: 20px 0;
 }
 
-.gallery_item {
-    margin: 30px;
+#checkout {
+    display: block;
+    margin: 20px 0;
 }
+
