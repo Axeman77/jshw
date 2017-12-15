@@ -3,45 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>HW6</title>
-  <!--<script>-->
-      <!--function bigPicture(event) {-->
-          <!--if(event.target.classList.contains( 'gallery_item' )) {-->
-              <!--mainPic.innerHTML = '';-->
-              <!--var bigPicture = event.target.cloneNode( true );-->
-              <!--bigPicture.classList.remove( 'gallery_item' );-->
-              <!--bigPicture.src = bigPicture.src.replace( 'small', 'big' );-->
-
-              <!--mainPic.appendChild(bigPicture);-->
-          <!--}-->
-
-          <!--event.stopPropagation();-->
-      <!--}-->
-
-      <!--function init() {-->
-          <!--var pictures = [ 'casio.jpg', 'swiss.jpg', 'general.jpg' ];-->
-          <!--var gallery = document.getElementById( 'gallery' );-->
-          <!--var mainPic = document.getElementById( 'mainPic' );-->
-
-          <!--for( var i = 0; i < pictures.length; i++ ) {-->
-              <!--var img = document.createElement( 'img' );-->
-              <!--img.src = 'small/' + pictures[i];-->
-              <!--img.classList.add( 'gallery_item' );-->
-
-<!--//            Проверка картинки-->
-              <!--img.onerror = function(){-->
-              <!--alert( 'картинка' + ' ' + 'small/' + pictures[2] + ' ' + 'не существует' )-->
-            <!--};-->
-
-              <!--gallery.appendChild( img );-->
-          <!--}-->
-
-
-        <!--gallery.addEventListener( 'click', bigPicture );-->
-
-      <!--}-->
-
-      <!--window.onload = init;-->
-  <!--</script>-->
+    <script>
+//    function cartCont( event ) {
+//        if (event.target.classList.contains( 'add_item' )) {
+//            cartCont.innerHTML = '';
+//
+//
+//
+////            mainPic.appendChild(///);
+//        }
+//    }
+    function init() {
+        var addItem = document.getElementsByClassName('add_item'); // добавить товары
+        var cart = document.getElementById( 'cart_content' );
+        
+        document.body.getElementById ( 'casio' ).addEventListener( 'click' ) = function (){
+            document.getElementById ( 'cart_content' ).innerHTML = 'все что успел';
+        };
+        
+    }
+      window.onload = init;
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
     <body>
@@ -49,19 +31,19 @@
         <img src="small/casio.jpg" alt="">
         <h3 class="item_title">casio</h3>
         <p>Цена: <span class="item_price">20</span>$</p>
-        <button class="add_item" data-id="7">Добавить в корзину</button>
+        <button class="add_item" id="casio">Добавить в корзину</button>
       </div>
       <div class="item_box">
         <img src="small/swiss.jpg" alt="">
         <h3 class="item_title">swiss</h3>
         <p>Цена: <span class="item_price">100</span>$</p>
-        <button class="add_item" data-id="2">Добавить в корзину</button>
+        <button class="add_item" id="swiss">Добавить в корзину</button>
       </div>
       <div class="item_box">
         <img src="small/general.jpg" alt="">
         <h3 class="item_title">general</h3>
         <p>Цена: <span class="item_price">1000</span>$</p>
-        <button class="add_item" data-id="5">Добавить в корзину</button>
+        <button class="add_item" id="general">Добавить в корзину</button>
       </div>
       <button id="checkout">Оформить заказ</button>
       <button id="clear_cart">Очистить корзину</button>
