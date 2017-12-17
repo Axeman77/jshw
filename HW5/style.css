@@ -4,6 +4,11 @@
         box-sizing: border-box;
     }
 
+    body {
+        width: 480px;
+        margin: auto;
+    }
+
     table {
         border-collapse: collapse;
         margin: auto;
@@ -43,7 +48,8 @@
         font-weight: bold;
         background: #000000;
         color: #ffffff;
-    }
+        float: left;
+        }
 
     .sf {
         width: 30px;

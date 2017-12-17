@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 800px;
+    height: 100%;
+    margin: auto;
+    background-color: #faf8d9;
+}
+
+.mainPic {
+    text-align: center;
+}
+.mainPic img {
+    width: 300px;
+}
+
+.gallery {
+    text-align: center;
+}
+
+.gallery_item {
+    margin: 30px;
+}
+
+.item_box {
+    height: 100%;
+    margin: 20px;
+    background-color: #faf8d9;
+    display: inline-block;
+}
+
+.add_item{
+    margin: 20px 0;
+}
+
+#checkout {
+    display: block;
+    margin: 20px 0;
+}
+

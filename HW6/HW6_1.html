@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HW6</title>
+  <script>
+      function bigPicture(event) {
+          if(event.target.classList.contains( 'gallery_item' )) {
+              mainPic.innerHTML = '';
+              var bigPicture = event.target.cloneNode( true );
+              bigPicture.classList.remove( 'gallery_item' );
+              bigPicture.src = bigPicture.src.replace( 'small', 'big' );
+
+              mainPic.appendChild(bigPicture);
+          }
+
+          event.stopPropagation();
+      }
+
+      function init() {
+          var pictures = [ 'casio.jpg', 'swiss.jpg', 'rolex.jpg', 'general.jpg' ];
+          var gallery = document.getElementById( 'gallery' );
+          var mainPic = document.getElementById( 'mainPic' );
+
+          for( var i = 0; i < pictures.length; i++ ) {
+              var img = document.createElement( 'img' );
+              img.src = 'small/' + pictures[i];
+              img.classList.add( 'gallery_item' );
+
+//            Проверка картинки
+              img.onerror = function(){
+              alert( 'картинка' + ' ' + 'small/' + pictures[2] + ' ' + 'не существует' )
+            };
+
+              gallery.appendChild( img );
+          }
+
+
+        gallery.addEventListener( 'click', bigPicture );
+
+      }
+
+      window.onload = init;
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="mainPic" id="mainPic"></div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</body>
+</html>
