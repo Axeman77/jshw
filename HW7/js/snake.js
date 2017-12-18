@@ -153,6 +153,7 @@ function isFoodUnit(unit) {
   if(unit.classList.contains('food-unit')) {
     score++;
     unit.classList.remove('food-unit');
+    document.getElementById('score').innerHTML = 'Ваш счет: '+score;
 
     createFood();
 
@@ -161,5 +162,11 @@ function isFoodUnit(unit) {
     return false;
   }
 }
+
+// function getScore() {
+//   document.getElementById('score').innerHTML = 'Ваш счет: '+score;
+//
+//   getScore()
+// }
 
 window.onload = init;

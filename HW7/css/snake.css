@@ -38,3 +38,9 @@ td.game-table-cell {
 .food-unit {
   background: red;
 }
+
+score{
+  margin-left: 72px;
+  font-size: 31px;
+  color: #FF0000;
+  }
