@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HW8</title>
+</head>
+<body>
+  <script>
+      if (!("a" in window)) {
+          var a = 1;
+      }
+      
+      alert (a);
+    // неопределено, так как а не пренадлежит объекту window;
+
+      var b = function a(x) {
+          x&&a(--x);
+      };
+      
+      alert ( a );
+      // ошибка
+
+      function a(x) {
+          return x*2;
+      };
+      
+      var a;
+      
+      alert ( a );
+
+      // выводит всю функцию как строку,
+
+      function b ( x, y, a ) {
+          arguments[2]=10;
+          alert ( a );
+      };
+      
+      b(1,2,3);
+
+      // выводит 10,
+      
+  </script>
+</body>
+</html>
